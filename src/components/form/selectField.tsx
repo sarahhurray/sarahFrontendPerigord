@@ -9,10 +9,7 @@ import {
 } from "@/components/ui/select";
 import { FieldErrors } from "./fieldErrors";
 
-type SelectOption = {
-  value: string;
-  label: string;
-};
+type SelectOption = string;
 
 type SelectFieldProps = {
   label: string;
@@ -26,7 +23,7 @@ export const SelectField = ({
   placeholder,
 }: SelectFieldProps) => {
   const field = useFieldContext<string>();
-
+  
   return (
     <div className="space-y-2">
       <div className="space-y-1">
@@ -40,8 +37,8 @@ export const SelectField = ({
           </SelectTrigger>
           <SelectContent>
             {options.map((option) => (
-              <SelectItem key={option.value} value={option.value}>
-                {option.label}
+              <SelectItem key={option} value={option}>
+                {option}
               </SelectItem>
             ))}
           </SelectContent>
