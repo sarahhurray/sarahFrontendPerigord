@@ -3,7 +3,9 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { UserRegistrationForm } from "./userRegistrationForm";
 
-
+/* there is currently no documentation on mocking tanstack/react-form 
+this attempt needs to be improved 
+ */
 vi.mock("../components/form", async () => {
   const actual: object = await vi.importActual("../components/form");
   return {
@@ -76,6 +78,7 @@ vi.mock("../components/form", async () => {
     useFieldContext: vi.fn(),
   };
 });
+/*currently fails due to inacdequate mocking of the form library*/
 test("UserRegistrationForm renders correctly", () => {
   const formData = {
     title: "User Registration",
