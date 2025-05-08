@@ -26,7 +26,7 @@ export const SelectField = ({
   
   return (
     <div className="space-y-2">
-      <div className="space-y-1">
+      <div className="space-y-1 mb-2">
         <Label htmlFor={field.name}>{label}</Label>
         <Select
           value={field.state.value}
