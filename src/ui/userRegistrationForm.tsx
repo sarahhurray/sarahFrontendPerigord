@@ -15,7 +15,6 @@ type FormProps = {
     fields: Field[];
   };
 };
-
 // get the field input type from the supplied data field to set the correct default value
 const getInputType = (field: Field) => {
   if (field.type === "text") {
@@ -32,7 +31,7 @@ const getInputType = (field: Field) => {
   }
 };
 
-export const DynamicForm = ({ formData }: FormProps) => {
+export const UserRegistrationForm = ({ formData }: FormProps) => {
   //formValuesJson are the values to display below the form when the form is submitted
   const [formValuesJson, setFormValuesJson] = useState("");
   const form = useAppForm({

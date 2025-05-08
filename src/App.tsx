@@ -1,12 +1,12 @@
 import formJson from "./components/form/form.json";
-import { DynamicForm } from "./ui/dynamicForm";
+import { UserRegistrationForm } from "./ui/userRegistrationForm";
 
 import "./App.css";
 
 function App() {
   return (
     <>
-      <DynamicForm formData={formJson} />
+      <UserRegistrationForm formData={formJson} />
     </>
   );
 }
